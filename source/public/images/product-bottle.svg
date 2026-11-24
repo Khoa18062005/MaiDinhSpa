@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 560" fill="none">
+  <defs>
+    <pattern id="glassHatch" width="6" height="6" patternTransform="rotate(40)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#6E583F" stroke-width="0.6" stroke-opacity="0.24"/>
+    </pattern>
+  </defs>
+  <rect width="560" height="560" fill="#FAF6EE"/>
+  <circle cx="280" cy="280" r="196" fill="#F3ECE0" stroke="#E0D4C2" stroke-width="1"/>
+  <!-- Stone Pedestal -->
+  <rect x="176" y="416" width="208" height="36" rx="4" fill="#E6DBC9" stroke="#53463B" stroke-width="1.3"/>
+  <!-- Apothecary Amber Glass Serum Bottle -->
+  <rect x="228" y="218" width="104" height="198" rx="22" fill="#D5A96A" fill-opacity="0.34" stroke="#3A3028" stroke-width="1.6"/>
+  <rect x="228" y="218" width="38" height="198" rx="18" fill="url(#glassHatch)"/>
+  <!-- Minimalist Woven Label on Bottle -->
+  <rect x="242" y="268" width="76" height="106" rx="4" fill="#FFFDF9" stroke="#8C7762" stroke-width="1"/>
+  <line x1="256" y1="296" x2="304" y2="296" stroke="#2B2521" stroke-width="1.6"/>
+  <line x1="256" y1="314" x2="296" y2="314" stroke="#8C7762" stroke-width="1"/>
+  <line x1="256" y1="328" x2="290" y2="328" stroke="#8C7762" stroke-width="1"/>
+  <!-- Dropper Collar & Pipette -->
+  <rect x="256" y="186" width="48" height="32" rx="4" fill="#EFE6D8" stroke="#3A3028" stroke-width="1.4"/>
+  <path d="M266 186 V152 C266 138 294 138 294 152 V186 Z" fill="#3A3028"/>
+</svg>

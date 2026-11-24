@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 680" fill="none">
+  <defs>
+    <linearGradient id="linenGrad" x1="0" y1="0" x2="960" y2="680" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F3ECE1"/>
+      <stop offset="55%" stop-color="#EAE0D0"/>
+      <stop offset="100%" stop-color="#DFD2BE"/>
+    </linearGradient>
+    <radialGradient id="sunWash" cx="0.72" cy="0.28" r="0.52">
+      <stop offset="0%" stop-color="#FFFDF9" stop-opacity="0.88"/>
+      <stop offset="65%" stop-color="#F7EFE2" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#E6D9C5" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="fineHatch" width="8" height="8" patternTransform="rotate(32)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#6E5D4F" stroke-width="0.65" stroke-opacity="0.24"/>
+    </pattern>
+    <pattern id="crossHatch" width="10" height="10" patternTransform="rotate(-24)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#4E5E4E" stroke-width="0.6" stroke-opacity="0.22"/>
+    </pattern>
+    <clipPath id="archClip">
+      <path d="M310 580 V230 C310 125 395 58 495 58 C595 58 680 125 680 230 V580 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Warm Plaster Architectural Ground -->
+  <rect width="960" height="680" fill="url(#linenGrad)"/>
+  <rect width="960" height="680" fill="url(#sunWash)"/>
+
+  <!-- Recessed Sanctuary Arch Niche -->
+  <g clip-path="url(#archClip)">
+    <rect x="300" y="50" width="390" height="540" fill="#FAF6EE"/>
+    <path d="M300 420 Q495 375 690 430 L690 590 L300 590 Z" fill="#EFE6D7"/>
+    <path d="M310 580 V230 C310 125 395 58 495 58" stroke="#D5C6B0" stroke-width="18" fill="none" opacity="0.45"/>
+    <!-- Sunlight Window Shadow Cast -->
+    <path d="M440 70 L680 190 L680 450 L390 320 Z" fill="#FFFDF9" opacity="0.65"/>
+  </g>
+  <path d="M310 580 V230 C310 125 395 58 495 58 C595 58 680 125 680 230 V580" stroke="#8C7762" stroke-width="1.4"/>
+
+  <!-- Travertine Treatment Plinth & Ceramic Vessel -->
+  <rect x="382" y="458" width="226" height="122" rx="6" fill="#E5D9C7" stroke="#6E5D4F" stroke-width="1.3"/>
+  <rect x="382" y="458" width="68" height="122" fill="url(#fineHatch)"/>
+  <line x1="362" y1="458" x2="628" y2="458" stroke="#5C4D40" stroke-width="1.8"/>
+
+  <!-- Hand-thrown Ceramic Vase with Translucent Wash & Etched Shading -->
+  <path d="M476 340 C468 362 446 382 448 416 C450 442 468 458 495 458 C522 458 540 442 542 416 C544 382 522 362 514 340 Z" fill="#FBF8F3" stroke="#4B3E34" stroke-width="1.5"/>
+  <path d="M476 340 C468 362 446 382 448 416 C450 442 468 458 495 458 C478 446 472 412 478 340 Z" fill="url(#fineHatch)"/>
+  <ellipse cx="495" cy="340" rx="19" ry="4.5" fill="#EDE3D4" stroke="#4B3E34" stroke-width="1.3"/>
+
+  <!-- Rolled Linen Towels & Essential Oil Dropper Bottle -->
+  <ellipse cx="416" cy="444" rx="26" ry="13" fill="#FAF7F2" stroke="#5C4D40" stroke-width="1.2"/>
+  <path d="M402 444 C410 438 424 438 430 444" stroke="#8C7762" stroke-width="1"/>
+  <rect x="564" y="408" width="24" height="50" rx="5" fill="#C89D5C" fill-opacity="0.38" stroke="#4B3E34" stroke-width="1.3"/>
+  <rect x="571" y="394" width="10" height="14" rx="2" fill="#4B3E34"/>
+  <line x1="576" y1="385" x2="576" y2="394" stroke="#4B3E34" stroke-width="2.2" stroke-linecap="round"/>
+
+  <!-- Botanical Olive & White Tulip Branches (Etched Line + Sage Wash) -->
+  <g stroke="#3B493B" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M495 340 C492 288 462 236 426 188"/>
+    <path d="M498 340 C512 276 548 226 592 178"/>
+    <path d="M495 312 C486 262 496 210 510 164"/>
+
+    <!-- Sage Leaves with Translucent Wash & Hatching -->
+    <path d="M454 226 C432 218 418 232 432 246 C446 254 458 240 454 226 Z" fill="#7B9075" fill-opacity="0.34"/>
+    <path d="M454 226 C432 218 418 232 432 246 Z" fill="url(#crossHatch)" stroke="none"/>
+    <path d="M474 266 C452 260 442 276 456 288 C470 294 480 280 474 266 Z" fill="#7B9075" fill-opacity="0.34"/>
+    <path d="M534 246 C556 238 568 254 552 266 C538 274 528 260 534 246 Z" fill="#7B9075" fill-opacity="0.34"/>
+    <path d="M562 208 C584 200 596 216 580 228 C566 236 556 222 562 208 Z" fill="#7B9075" fill-opacity="0.34"/>
+
+    <!-- Sculpted White Lotus / Tulip Buds -->
+    <path d="M426 188 C414 174 416 154 428 146 C438 156 440 174 426 188 Z" fill="#FFFDF9"/>
+    <path d="M510 164 C498 148 502 128 515 120 C526 130 526 150 510 164 Z" fill="#FFFDF9"/>
+    <path d="M592 178 C584 162 592 144 606 140 C614 152 608 170 592 178 Z" fill="#FFFDF9"/>
+  </g>
+
+  <!-- Foreground Left Botanical Branch Framing Scene -->
+  <g stroke="#344234" stroke-width="1.5" stroke-linecap="round">
+    <path d="M64 680 C98 540 132 410 198 268"/>
+    <path d="M126 480 C92 464 78 486 102 504 C122 514 136 496 126 480 Z" fill="#6D8468" fill-opacity="0.38"/>
+    <path d="M152 392 C186 378 202 398 178 416 C158 426 142 408 152 392 Z" fill="#6D8468" fill-opacity="0.38"/>
+    <path d="M174 324 C142 308 130 328 152 346 C172 354 184 338 174 324 Z" fill="#6D8468" fill-opacity="0.38"/>
+    <path d="M198 268 C222 252 238 270 216 288 C198 298 188 282 198 268 Z" fill="#6D8468" fill-opacity="0.38"/>
+  </g>
+
+  <!-- Right Warm Brass Hanging Lantern Accent -->
+  <line x1="786" y1="0" x2="786" y2="196" stroke="#745B2F" stroke-width="1.3"/>
+  <circle cx="786" cy="224" r="28" fill="#FBF4E4" stroke="#745B2F" stroke-width="1.4"/>
+  <circle cx="786" cy="224" r="44" stroke="#B59461" stroke-width="0.9" stroke-dasharray="3 4" opacity="0.65"/>
+
+  <!-- Subtle Floor Horizon -->
+  <line x1="210" y1="580" x2="840" y2="580" stroke="#7A6855" stroke-width="1.2"/>
+</svg>

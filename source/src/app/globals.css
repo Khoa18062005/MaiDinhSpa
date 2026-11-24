@@ -1,0 +1,331 @@
+@import "tailwindcss";
+
+/* 1. DEFAULT PALETTE — Kem Sữa & Nâu Espresso (Warm Botanical Sanctuary) */
+:root,
+[data-theme="alabaster-espresso"] {
+  --p-color-amount: 0.65;
+  --bg-canvas-base: #F6F1E9;
+  --bg-tint-target: #EDE2D0;
+  --bg-canvas: color-mix(in oklch, var(--bg-canvas-base), var(--bg-tint-target) calc(var(--p-color-amount) * 35%));
+  --bg-surface-soft: #FAF7F2;
+  --bg-surface-card: #FFFFFF;
+  --bg-sidebar: #EFE9DF;
+  --bg-pill-active: #E8DFD1;
+  --border-subtle: #E2D8C9;
+  --border-strong: #C9B8A0;
+
+  --text-primary: #2B2521;
+  --text-secondary: #5C534B;
+  --text-muted: #6E645B;
+
+  --btn-primary-bg: #2B2521;
+  --btn-primary-hover: #3F3630;
+  --btn-primary-text: #FAF7F2;
+
+  --accent-gold: #B59461;
+  --accent-gold-text: #745B2F;
+  --accent-gold-surface: #F5ECDC;
+  --accent-sage: #1F5C3E;
+  --accent-sage-surface: #E7F3EC;
+
+  --feature-banner-bg: #2B2521;
+  --feature-banner-card: #362F2A;
+  --feature-banner-border: #4A4038;
+  --feature-banner-accent: #DFC084;
+
+  --selection-bg: #E5D6BE;
+  --selection-text: #2B2521;
+  --scrollbar-track: #EFE9DF;
+  --scrollbar-thumb: #C9B8A0;
+
+  --status-pending-bg: #FEF3DC;
+  --status-pending-text: #7D4E0D;
+  --status-confirmed-bg: #E7F3EC;
+  --status-confirmed-text: #1F5C3E;
+  --status-completed-bg: #DFEFE6;
+  --status-completed-text: #184A31;
+  --status-cancelled-bg: #EFECE6;
+  --status-cancelled-text: #575049;
+  --status-noshow-bg: #FCE9E7;
+  --status-noshow-text: #9E2A22;
+
+  --shadow-ambient: 0 10px 32px -4px rgba(43, 37, 33, 0.06), 0 2px 8px -2px rgba(43, 37, 33, 0.04);
+  --shadow-elevated: 0 18px 42px -8px rgba(43, 37, 33, 0.1), 0 4px 12px -2px rgba(43, 37, 33, 0.05);
+}
+
+/* 2. HERBAL CELADON — Ngọc Thảo Mộc & Rêu Rừng */
+[data-theme="herbal-celadon"] {
+  --bg-canvas-base: #F1F5F0;
+  --bg-tint-target: #DCE8DC;
+  --bg-canvas: color-mix(in oklch, var(--bg-canvas-base), var(--bg-tint-target) calc(var(--p-color-amount) * 45%));
+  --bg-surface-soft: #F7FAF6;
+  --bg-surface-card: #FFFFFF;
+  --bg-sidebar: #E4ECE3;
+  --bg-pill-active: #D7E4D6;
+  --border-subtle: #D2DFD1;
+  --border-strong: #AEBEAEE6;
+
+  --text-primary: #183024;
+  --text-secondary: #3E5348;
+  --text-muted: #53685D;
+
+  --btn-primary-bg: #1B3B2B;
+  --btn-primary-hover: #264F3B;
+  --btn-primary-text: #F6FAF6;
+
+  --accent-gold: #6E917A;
+  --accent-gold-text: #235D3E;
+  --accent-gold-surface: #E5F0E8;
+  --accent-sage: #1B5E3C;
+  --accent-sage-surface: #E3F2EA;
+
+  --feature-banner-bg: #183225;
+  --feature-banner-card: #214030;
+  --feature-banner-border: #315743;
+  --feature-banner-accent: #DFC48C;
+
+  --selection-bg: #CFE0D0;
+  --selection-text: #183024;
+  --scrollbar-track: #E4ECE3;
+  --scrollbar-thumb: #A9BCA9;
+
+  --shadow-ambient: 0 10px 32px -4px rgba(24, 48, 36, 0.06), 0 2px 8px -2px rgba(24, 48, 36, 0.04);
+  --shadow-elevated: 0 18px 42px -8px rgba(24, 48, 36, 0.11), 0 4px 12px -2px rgba(24, 48, 36, 0.05);
+}
+
+/* 3. BLUSH CAMELLIA — Phấn Hoa Trà & Mận Trầm */
+[data-theme="blush-camellia"] {
+  --bg-canvas-base: #FAF2F0;
+  --bg-tint-target: #F2DFDC;
+  --bg-canvas: color-mix(in oklch, var(--bg-canvas-base), var(--bg-tint-target) calc(var(--p-color-amount) * 45%));
+  --bg-surface-soft: #FDF8F7;
+  --bg-surface-card: #FFFFFF;
+  --bg-sidebar: #F3E6E4;
+  --bg-pill-active: #EEDAD7;
+  --border-subtle: #E8D5D2;
+  --border-strong: #CFAFB0;
+
+  --text-primary: #381E24;
+  --text-secondary: #5E4349;
+  --text-muted: #70555B;
+
+  --btn-primary-bg: #3F2128;
+  --btn-primary-hover: #562E37;
+  --btn-primary-text: #FDF7F6;
+
+  --accent-gold: #B87B82;
+  --accent-gold-text: #7D424D;
+  --accent-gold-surface: #F8EAEB;
+  --accent-sage: #245B43;
+  --accent-sage-surface: #E7F3EC;
+
+  --feature-banner-bg: #361C22;
+  --feature-banner-card: #45262D;
+  --feature-banner-border: #5C363F;
+  --feature-banner-accent: #ECC5B8;
+
+  --selection-bg: #EED3D0;
+  --selection-text: #381E24;
+  --scrollbar-track: #F3E6E4;
+  --scrollbar-thumb: #CFAFB0;
+
+  --shadow-ambient: 0 10px 32px -4px rgba(56, 30, 36, 0.06), 0 2px 8px -2px rgba(56, 30, 36, 0.04);
+  --shadow-elevated: 0 18px 42px -8px rgba(56, 30, 36, 0.11), 0 4px 12px -2px rgba(56, 30, 36, 0.05);
+}
+
+/* 4. KYOTO MATCHA — Trà Gạo Rang & Gỗ Tuyết Tùng */
+[data-theme="kyoto-matcha"] {
+  --bg-canvas-base: #F4F3EB;
+  --bg-tint-target: #E5E4D3;
+  --bg-canvas: color-mix(in oklch, var(--bg-canvas-base), var(--bg-tint-target) calc(var(--p-color-amount) * 45%));
+  --bg-surface-soft: #F9F8F2;
+  --bg-surface-card: #FFFFFF;
+  --bg-sidebar: #EAE8DC;
+  --bg-pill-active: #E1DFCF;
+  --border-subtle: #DCD9C8;
+  --border-strong: #BEBAA3;
+
+  --text-primary: #232E1F;
+  --text-secondary: #4B5444;
+  --text-muted: #5E6756;
+
+  --btn-primary-bg: #283623;
+  --btn-primary-hover: #364830;
+  --btn-primary-text: #F9F8F2;
+
+  --accent-gold: #9E8B56;
+  --accent-gold-text: #5B4D20;
+  --accent-gold-surface: #F2EFE0;
+  --accent-sage: #265938;
+  --accent-sage-surface: #E6F1E9;
+
+  --feature-banner-bg: #232F1E;
+  --feature-banner-card: #2E3D28;
+  --feature-banner-border: #41543A;
+  --feature-banner-accent: #DFC98B;
+
+  --selection-bg: #DCDAC6;
+  --selection-text: #232E1F;
+  --scrollbar-track: #EAE8DC;
+  --scrollbar-thumb: #B8B49B;
+}
+
+/* 5. CLINICAL COBALT — Sứ Trắng & Xanh Khoáng Chất */
+[data-theme="clinical-cobalt"] {
+  --bg-canvas-base: #F1F5F9;
+  --bg-tint-target: #DFEAEE;
+  --bg-canvas: color-mix(in oklch, var(--bg-canvas-base), var(--bg-tint-target) calc(var(--p-color-amount) * 45%));
+  --bg-surface-soft: #F8FAFC;
+  --bg-surface-card: #FFFFFF;
+  --bg-sidebar: #E6EEF5;
+  --bg-pill-active: #DAE6F0;
+  --border-subtle: #D5E1EC;
+  --border-strong: #B2C4D6;
+
+  --text-primary: #16283A;
+  --text-secondary: #415366;
+  --text-muted: #54667A;
+
+  --btn-primary-bg: #1A324A;
+  --btn-primary-hover: #254463;
+  --btn-primary-text: #F7FAFC;
+
+  --accent-gold: #5C82A6;
+  --accent-gold-text: #1E4E79;
+  --accent-gold-surface: #E7F0F8;
+  --accent-sage: #1D5D47;
+  --accent-sage-surface: #E5F3EE;
+
+  --feature-banner-bg: #15283B;
+  --feature-banner-card: #1E364F;
+  --feature-banner-border: #2E4B69;
+  --feature-banner-accent: #DFC48E;
+
+  --selection-bg: #D2E1F0;
+  --selection-text: #16283A;
+  --scrollbar-track: #E6EEF5;
+  --scrollbar-thumb: #B2C4D6;
+
+  --shadow-ambient: 0 10px 32px -4px rgba(22, 40, 58, 0.06), 0 2px 8px -2px rgba(22, 40, 58, 0.04);
+  --shadow-elevated: 0 18px 42px -8px rgba(22, 40, 58, 0.11), 0 4px 12px -2px rgba(22, 40, 58, 0.05);
+}
+
+/* 6. VELVET OUD — Đêm Trầm Hương & Vàng Kim (Composed Dark Sanctuary) */
+[data-theme="velvet-oud"] {
+  --bg-canvas-base: #181512;
+  --bg-tint-target: #231C15;
+  --bg-canvas: color-mix(in oklch, var(--bg-canvas-base), var(--bg-tint-target) calc(var(--p-color-amount) * 55%));
+  --bg-surface-soft: #211C18;
+  --bg-surface-card: #28221D;
+  --bg-sidebar: #1E1915;
+  --bg-pill-active: #382F27;
+  --border-subtle: #3B322A;
+  --border-strong: #57493D;
+
+  --text-primary: #F5EFE6;
+  --text-secondary: #C9BDAE;
+  --text-muted: #A89B8C;
+
+  --btn-primary-bg: #DFC084;
+  --btn-primary-hover: #EAD09B;
+  --btn-primary-text: #1B1612;
+
+  --accent-gold: #D4B272;
+  --accent-gold-text: #E2C182;
+  --accent-gold-surface: #332A20;
+  --accent-sage: #7AD1A4;
+  --accent-sage-surface: #1E3529;
+
+  --feature-banner-bg: #221C17;
+  --feature-banner-card: #2C251E;
+  --feature-banner-border: #453A2F;
+  --feature-banner-accent: #DFC084;
+
+  --selection-bg: #4A3D2E;
+  --selection-text: #FAF5EC;
+  --scrollbar-track: #1E1915;
+  --scrollbar-thumb: #4D4035;
+
+  --status-pending-bg: #3B2D16;
+  --status-pending-text: #F5CA7B;
+  --status-confirmed-bg: #1B3628;
+  --status-confirmed-text: #8CE0B3;
+  --status-completed-bg: #193325;
+  --status-completed-text: #95E6BA;
+  --status-cancelled-bg: #2E2925;
+  --status-cancelled-text: #C4B8AB;
+  --status-noshow-bg: #3D1F1D;
+  --status-noshow-text: #F7A6A0;
+
+  --shadow-ambient: 0 12px 34px -4px rgba(0, 0, 0, 0.42), 0 2px 10px -2px rgba(0, 0, 0, 0.3);
+  --shadow-elevated: 0 20px 46px -8px rgba(0, 0, 0, 0.55), 0 6px 16px -2px rgba(0, 0, 0, 0.35);
+}
+
+@layer base {
+  html {
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    scroll-behavior: smooth;
+    caret-color: var(--accent-gold-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.22s ease, color 0.22s ease;
+  }
+
+  body {
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+    line-height: 1.65;
+    transition: background-color 0.22s ease, color 0.22s ease;
+  }
+
+  ::selection {
+    background-color: var(--selection-bg);
+    color: var(--selection-text);
+  }
+
+  a {
+    text-underline-offset: 4px;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent-gold-text);
+    outline-offset: 2px;
+  }
+}
+
+/* Custom themed scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 9999px;
+  border: 2px solid var(--scrollbar-track);
+}
+
+.font-serif-display {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

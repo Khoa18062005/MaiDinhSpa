@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" fill="none">
+  <defs>
+    <linearGradient id="roomWall" x1="0" y1="0" x2="880" y2="560" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F6F0E6"/>
+      <stop offset="100%" stop-color="#E7DBCA"/>
+    </linearGradient>
+    <pattern id="linenShade" width="7" height="7" patternTransform="rotate(30)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#635345" stroke-width="0.65" stroke-opacity="0.24"/>
+    </pattern>
+  </defs>
+
+  <rect width="880" height="560" fill="url(#roomWall)"/>
+
+  <!-- Soft Linen Privacy Drapery Left & Right -->
+  <path d="M0 0 H156 C138 140 162 290 136 470 H0 Z" fill="#FAF7F2" stroke="#8C7865" stroke-width="1.2"/>
+  <path d="M52 0 C42 150 62 300 44 470" stroke="#C5B59F" stroke-width="1.1"/>
+  <path d="M98 0 C88 150 108 300 92 470" stroke="#C5B59F" stroke-width="1.1"/>
+  <rect x="0" y="0" width="46" height="470" fill="url(#linenShade)"/>
+
+  <!-- Arched Back Wall Panel -->
+  <path d="M240 470 V168 C240 96 298 44 370 44 H550 C622 44 680 96 680 168 V470" fill="#FCF9F4" stroke="#9B8772" stroke-width="1.3"/>
+
+  <!-- Ergonomic Upholstered Treatment Bed -->
+  <rect x="234" y="346" width="424" height="58" rx="22" fill="#FFFDF9" stroke="#3D332B" stroke-width="1.6"/>
+  <rect x="234" y="376" width="424" height="28" rx="12" fill="url(#linenShade)"/>
+  <!-- Head Bolster Pillow & Folded Blanket -->
+  <rect x="254" y="322" width="96" height="26" rx="13" fill="#EFE6D8" stroke="#3D332B" stroke-width="1.4"/>
+  <rect x="498" y="338" width="136" height="66" rx="10" fill="#DFD1BC" fill-opacity="0.65" stroke="#3D332B" stroke-width="1.4"/>
+  <!-- Solid Oak Bed Base -->
+  <line x1="278" y1="404" x2="278" y2="470" stroke="#3D332B" stroke-width="3"/>
+  <line x1="612" y1="404" x2="612" y2="470" stroke="#3D332B" stroke-width="3"/>
+  <line x1="278" y1="442" x2="612" y2="442" stroke="#3D332B" stroke-width="2"/>
+
+  <!-- Omega Bio-Light Dome Arch Over Headrest -->
+  <path d="M246 346 C246 266 358 266 358 346" fill="#E8DFCE" fill-opacity="0.55" stroke="#3D332B" stroke-width="1.6"/>
+  <path d="M262 342 C262 284 342 284 342 342" stroke="#B59461" stroke-width="1.2" stroke-dasharray="3 3"/>
+
+  <!-- Clinical Trolley & Cold Electroporation + UV Sterilizer Box (Right) -->
+  <rect x="706" y="294" width="124" height="176" rx="8" fill="#FAF6EE" stroke="#3D332B" stroke-width="1.4"/>
+  <line x1="706" y1="354" x2="830" y2="354" stroke="#3D332B" stroke-width="1.3"/>
+  <line x1="706" y1="414" x2="830" y2="414" stroke="#3D332B" stroke-width="1.3"/>
+  <!-- Cold Electroporation Console -->
+  <rect x="724" y="246" width="88" height="48" rx="8" fill="#FFFDF9" stroke="#3D332B" stroke-width="1.5"/>
+  <rect x="738" y="258" width="42" height="22" rx="3" fill="#E7F3EC" stroke="#1F5C3E" stroke-width="1"/>
+  <circle cx="794" cy="269" r="5" fill="#B59461"/>
+  <!-- UV-C Sterilizer Drawer -->
+  <rect x="722" y="366" width="92" height="36" rx="4" fill="#EFE8DC" stroke="#745B2F" stroke-width="1.2"/>
+
+  <!-- Warm Pendant Light & Botanical Accent -->
+  <line x1="460" y1="0" x2="460" y2="118" stroke="#745B2F" stroke-width="1.3"/>
+  <path d="M416 146 C416 122 504 122 504 146 Z" fill="#FBF3E2" stroke="#3D332B" stroke-width="1.4"/>
+  <line x1="0" y1="470" x2="880" y2="470" stroke="#7C6A58" stroke-width="1.3"/>
+</svg>

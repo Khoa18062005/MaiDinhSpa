@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-24T13:42:00+07:00",
+  "title": "Design System: Mai Đinh Spa",
+  "extensions": {
+    "colorMeta": {
+      "espresso-primary": {
+        "role": "primary",
+        "displayName": "Deep Roasted Espresso",
+        "canonical": "#2B2521",
+        "tonalRamp": ["#1A1614", "#2B2521", "#433A34", "#5F534B", "#82746A", "#AC9E93", "#D6CCC3", "#F2EDE8"]
+      },
+      "burnished-brass": {
+        "role": "secondary",
+        "displayName": "Burnished Brass",
+        "canonical": "#745B2F",
+        "tonalRamp": ["#2D2210", "#4F3D1E", "#745B2F", "#967844", "#B59461", "#D1B78E", "#E8D8BE", "#FAF4E8"]
+      },
+      "botanical-sage": {
+        "role": "tertiary",
+        "displayName": "Steeped Herbal Sage",
+        "canonical": "#1F5C3E",
+        "tonalRamp": ["#113523", "#1F5C3E", "#2E7A55", "#4B9972", "#75B695", "#A6D3BC", "#D3EBDF", "#EDF7F2"]
+      },
+      "warm-alabaster": {
+        "role": "neutral",
+        "displayName": "Warm Alabaster",
+        "canonical": "#F6F1E9",
+        "tonalRamp": ["#2B2521", "#4D443D", "#6E645B", "#94897E", "#BDB2A6", "#DED5C8", "#EFE9DF", "#F6F1E9"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display Serif", "purpose": "Hero statements and primary editorial page titles." },
+      "headline": { "displayName": "Section Headline", "purpose": "Major Persuade section headings." },
+      "title": { "displayName": "Operate Title", "purpose": "Admin, Member Portal, and checkout dialog headings." },
+      "body": { "displayName": "Body Copy", "purpose": "Descriptions, ritual steps, and skincare consultation notes." },
+      "label": { "displayName": "Pill & Status Label", "purpose": "Navigation pills, category filters, and status badges." }
+    },
+    "shadows": [
+      {
+        "name": "ambient-float",
+        "value": "0 10px 32px -4px rgba(43, 37, 33, 0.06), 0 2px 8px -2px rgba(43, 37, 33, 0.04)",
+        "purpose": "Floating pill navigation bar and sticky reservation summary ticket."
+      },
+      {
+        "name": "elevated-hover",
+        "value": "0 18px 42px -8px rgba(43, 37, 33, 0.1), 0 4px 12px -2px rgba(43, 37, 33, 0.05)",
+        "purpose": "Interactive card lift on hover and modal dialogs."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-sanctuary",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Calm exponential ease-out for card hover lift and drawer transitions."
+      },
+      {
+        "name": "duration-operate",
+        "value": "160ms",
+        "purpose": "Crisp state transitions across Admin and Member controls."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Pill CTA",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary reservation call-to-action button in Deep Espresso.",
+      "html": "<button class=\"ds-btn-primary\"><span>Đặt Lịch Ngay</span><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.85\"><path d=\"M5 12h14M13 5l7 7-7 7\"/></svg></button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 10px; background: #2B2521; color: #FAF7F2; border: none; border-radius: 9999px; padding: 12px 28px; font-size: 14px; font-weight: 600; cursor: pointer; transition: background 0.18s ease, transform 0.18s ease; } .ds-btn-primary:hover { background: #3F3630; transform: translateY(-1px); } .ds-btn-primary:focus-visible { outline: 2px solid #745B2F; outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Outlined Pill",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Secondary exploration action with warm sand border.",
+      "html": "<button class=\"ds-btn-secondary\">Gói Dịch Vụ</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; background: transparent; color: #2B2521; border: 1px solid #C9B8A0; border-radius: 9999px; padding: 12px 24px; font-size: 14px; font-weight: 600; cursor: pointer; transition: background 0.18s ease; } .ds-btn-secondary:hover { background: #E8DFD1; } .ds-btn-secondary:focus-visible { outline: 2px solid #745B2F; outline-offset: 2px; }"
+    },
+    {
+      "name": "Floating Pill Navigation",
+      "kind": "nav",
+      "refersTo": "nav-pill-active",
+      "description": "Signature porcelain pill navbar with toasted-oat active tab.",
+      "html": "<nav class=\"ds-pill-nav\"><span class=\"ds-emblem\">MĐ</span><a class=\"ds-nav-item ds-active\" href=\"#\">TRANG CHỦ</a><a class=\"ds-nav-item\" href=\"#\">DỊCH VỤ</a><a class=\"ds-nav-item\" href=\"#\">ĐẶT LỊCH</a></nav>",
+      "css": ".ds-pill-nav { display: inline-flex; align-items: center; gap: 6px; background: #FFFFFF; border: 1px solid #E2D8C9; border-radius: 9999px; padding: 8px 14px; box-shadow: 0 10px 32px -4px rgba(43,37,33,0.06); } .ds-nav-item { color: #5C534B; text-decoration: none; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; padding: 8px 14px; border-radius: 9999px; transition: background 0.16s ease; } .ds-nav-item:hover { background: #FAF7F2; color: #2B2521; } .ds-active { background: #E8DFD1; color: #2B2521; } .ds-emblem { display: inline-flex; width: 34px; height: 34px; align-items: center; justify-content: center; border-radius: 9999px; border: 1px solid #C9B8A0; background: #FAF7F2; color: #745B2F; font-family: Georgia, serif; font-weight: 600; }"
+    },
+    {
+      "name": "Booking Status Chip",
+      "kind": "chip",
+      "description": "High-contrast AA semantic status pill with leading indicator dot.",
+      "html": "<span class=\"ds-chip-confirmed\"><span class=\"ds-dot\"></span>Đã xác nhận giữ chỗ</span>",
+      "css": ".ds-chip-confirmed { display: inline-flex; align-items: center; gap: 6px; background: #E7F3EC; color: #1F5C3E; border-radius: 9999px; padding: 4px 12px; font-size: 12px; font-weight: 600; } .ds-dot { width: 6px; height: 6px; border-radius: 9999px; background: #1F5C3E; }"
+    },
+    {
+      "name": "Form Field Input",
+      "kind": "input",
+      "description": "Soft linen tactile input field with burnished brass focus ring.",
+      "html": "<input class=\"ds-input\" type=\"tel\" placeholder=\"0909 123 456\" />",
+      "css": ".ds-input { height: 46px; padding: 0 16px; border-radius: 12px; border: 1px solid #C9B8A0; background: #FAF7F2; color: #2B2521; font-size: 14px; font-variant-numeric: tabular-nums; } .ds-input::placeholder { color: #6E645B; } .ds-input:focus-visible { outline: 2px solid #745B2F; outline-offset: 2px; background: #FFFFFF; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Warm Botanical Sanctuary",
+    "overview": "Hệ thống giao diện Mai Đinh Spa từ chối hoàn toàn nền trắng công nghiệp chói mắt hay các hiệu ứng kính mờ màu mè thường thấy ở web thẩm mỹ đại trà. Toàn bộ không gian số được bao phủ bởi chất liệu vữa kem ấm như ánh nắng sớm chiếu qua rèm vải đũi trong phòng trị liệu yên tĩnh, kết hợp hình minh họa khắc nét thảo mộc truyền thống và chữ mực nâu Espresso sâu lắng.",
+    "keyCharacteristics": [
+      "Bề mặt đa lớp từ Kem sữa ấm, Đũi sáng đến Sứ trắng, tạo chiều sâu bằng sắc độ thay vì bóng đổ nặng nề.",
+      "Nút bấm, nhãn trạng thái và thanh điều hướng nổi đồng nhất ngôn ngữ viên thuốc tròn trịa (9999px).",
+      "Độ tương phản chữ được hiệu chỉnh nghiêm ngặt đạt chuẩn WCAG AA (≥ 4.5:1) trên mọi nền kem ấm.",
+      "Chữ số tài chính, giờ hẹn, thời lượng phút và điểm thưởng luôn khóa độ rộng cột số (tabular-nums)."
+    ],
+    "rules": [
+      {
+        "name": "The Brass-Ink Split Rule",
+        "body": "Tuyệt đối không dùng vàng nhạt trang trí (#B59461) để viết chữ cỡ nhỏ trên nền kem hoặc trắng; mọi văn bản màu đồng bắt buộc dùng Burnished Brass (#745B2F).",
+        "section": "colors"
+      },
+      {
+        "name": "The Zero Pure-Black Rule",
+        "body": "Không bao giờ sử dụng màu đen #000000 cho chữ, nền thẻ VIP hay bóng đổ; sắc tối nhất trong toàn hệ thống là nâu than ấm #2B2521.",
+        "section": "colors"
+      },
+      {
+        "name": "The Operate Sans-Only Rule",
+        "body": "Trong khu vực /tai-khoan và /admin, mọi nhãn điều khiển, bảng biểu và nút thao tác chỉ dùng Be Vietnam Pro với kích thước cố định; không đưa chữ có chân vào điều khiển nghiệp vụ.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Ledger Rule",
+        "body": "Mọi giá tiền VNĐ, khung giờ (14:30), thời lượng (75 phút), số điện thoại và điểm thưởng bắt buộc bật font-variant-numeric: tabular-nums.",
+        "section": "typography"
+      },
+      {
+        "name": "The Warm-Shadow Offset Rule",
+        "body": "Mọi bóng đổ đều pha sắc nâu ấm rgba(43, 37, 33, ...) và có độ lệch trục dọc dương; không dùng vầng sáng không độ lệch hay viền màu một cạnh bên của thẻ bo tròn.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do giữ sự khác biệt rõ rệt giữa ServiceCard (có thời lượng phút và nút Đặt lịch) với ProductCard (hiển thị dung tích, trạng thái tồn tại quầy và nút Xem chi tiết dẫn tới tư vấn Zalo).",
+      "Do kiểm tra và khóa trực tiếp các khung giờ vượt quá số giường đồng thời hoặc lố giờ đóng cửa ngay trên lưới chọn giờ.",
+      "Do gắn nhãn minh họa rõ ràng cho các số liệu đánh giá mẫu khi chưa đấu nối dữ liệu thực tế."
+    ],
+    "donts": [
+      "Don't đặt dòng chữ nhãn nhỏ (eyebrow/kicker) phía trên mọi tiêu đề; hãy để tiêu đề Spectral tự dẫn dắt thị giác.",
+      "Don't thêm biểu tượng giỏ hàng, số lượng mua online hay nút thanh toán trước vào bất kỳ màn hình sản phẩm bán lẻ nào.",
+      "Don't gộp chung tiền dịch vụ và tiền mỹ phẩm vào một ô khi tính chiết khấu hạng thành viên tại quầy."
+    ]
+  }
+}
