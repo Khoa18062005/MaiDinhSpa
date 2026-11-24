@@ -164,7 +164,86 @@ export default function AdminSettingsPage() {
           </div>
         </div>
 
-        <div className="mt-6 overflow-x-auto">
+        {/* Mobile Stacked Cards */}
+        <div className="mt-6 space-y-3 md:hidden">
+          {localTiers.map((tier, idx) => (
+            <div
+              key={tier.id}
+              className="rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-surface-soft)] p-4 space-y-3 tabular-nums"
+            >
+              <div className="flex items-center justify-between">
+                <MembershipTierBadge tierCode={tier.code} size="md" />
+                <span className="text-xs font-semibold text-[var(--text-muted)]">
+                  Từ {formatVND(tier.minSpent)}
+                </span>
+              </div>
+
+              <div className="grid grid-cols-3 gap-2.5">
+                <div>
+                  <label className="block text-[11px] font-semibold text-[var(--text-secondary)]">
+                    Mốc (VNĐ)
+                  </label>
+                  <input
+                    type="number"
+                    min={0}
+                    step={500000}
+                    disabled={tier.code === 'MEMBER'}
+                    value={tier.minSpent}
+                    onChange={(e) => {
+                      const val = Number(e.target.value);
+                      setLocalTiers((prev) =>
+                        prev.map((t, i) => (i === idx ? { ...t, minSpent: val } : t))
+                      );
+                    }}
+                    aria-label={`Mốc chi tiêu ${tier.name}`}
+                    className="mt-1 h-11 w-full rounded-lg border border-[var(--border-strong)] bg-[var(--bg-surface-card)] px-2.5 text-sm font-semibold disabled:opacity-60"
+                  />
+                </div>
+                <div>
+                  <label className="block text-[11px] font-semibold text-[var(--text-secondary)]">
+                    Điểm / 100k
+                  </label>
+                  <input
+                    type="number"
+                    min={1}
+                    max={20}
+                    value={tier.pointsPer100k}
+                    onChange={(e) => {
+                      const val = Number(e.target.value);
+                      setLocalTiers((prev) =>
+                        prev.map((t, i) => (i === idx ? { ...t, pointsPer100k: val } : t))
+                      );
+                    }}
+                    aria-label={`Hệ số điểm ${tier.name}`}
+                    className="mt-1 h-11 w-full rounded-lg border border-[var(--border-strong)] bg-[var(--bg-surface-card)] px-2.5 text-sm font-semibold"
+                  />
+                </div>
+                <div>
+                  <label className="block text-[11px] font-semibold text-[var(--text-secondary)]">
+                    % Giảm DV
+                  </label>
+                  <input
+                    type="number"
+                    min={0}
+                    max={50}
+                    value={tier.discountPercent}
+                    onChange={(e) => {
+                      const val = Number(e.target.value);
+                      setLocalTiers((prev) =>
+                        prev.map((t, i) => (i === idx ? { ...t, discountPercent: val } : t))
+                      );
+                    }}
+                    aria-label={`Phần trăm giảm giá ${tier.name}`}
+                    className="mt-1 h-11 w-full rounded-lg border border-[var(--border-strong)] bg-[var(--bg-surface-card)] px-2.5 text-sm font-semibold"
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop Table */}
+        <div className="mt-6 hidden overflow-x-auto md:block">
           <table className="w-full text-left text-sm tabular-nums">
             <thead>
               <tr className="border-b border-[var(--border-subtle)] text-xs text-[var(--text-muted)]">

@@ -60,7 +60,7 @@ export default function FloatingContact({ settings }: FloatingContactProps) {
         href={settings.zaloUrl}
         target="_blank"
         rel="noreferrer"
-        className="fixed right-4 bottom-4 z-40 inline-flex min-h-11 items-center gap-2 whitespace-nowrap rounded-full bg-[var(--btn-primary-bg)] px-4 py-2.5 text-xs font-semibold text-[var(--btn-primary-text)] shadow-[var(--shadow-elevated)] transition-colors hover:bg-[var(--btn-primary-hover)]"
+        className="fixed right-4 bottom-4 z-40 hidden min-h-11 items-center gap-2 whitespace-nowrap rounded-full bg-[var(--btn-primary-bg)] px-4 py-2.5 text-xs font-semibold text-[var(--btn-primary-text)] shadow-[var(--shadow-elevated)] transition-colors hover:bg-[var(--btn-primary-hover)] lg:inline-flex"
       >
         <MessageCircle className="h-4 w-4 shrink-0 opacity-90" strokeWidth={1.85} />
         Chat với Mai Đinh

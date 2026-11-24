@@ -181,7 +181,77 @@ export default function AdminDashboardPage() {
           Nếu lễ tân nhập sai số tiền sau khi bấm Hoàn thành, bấm <strong>Hủy &amp; Đảo điểm</strong> để hệ thống tự động trừ ngược chi tiêu và ghi bút toán đảo vào sổ cái.
         </p>
 
-        <div className="mt-4 overflow-x-auto">
+        {/* Mobile Stacked Cards (iPhone 16/17 Pro Max friendly) */}
+        <div className="mt-4 space-y-3 md:hidden">
+          {invoices.map((inv) => (
+            <div
+              key={inv.id}
+              className="rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-surface-soft)] p-4 tabular-nums"
+            >
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-sm font-bold text-[var(--text-primary)]">
+                  {inv.invoiceCode}
+                </span>
+                <span
+                  className={`inline-flex rounded-full px-2.5 py-0.5 text-xs font-semibold ${
+                    inv.status === 'PAID'
+                      ? 'bg-[#E7F3EC] text-[#1F5C3E]'
+                      : 'bg-[#EFECE6] text-[#575049] line-through'
+                  }`}
+                >
+                  {inv.status === 'PAID' ? 'Đã thu tiền' : 'Đã hủy (VOID)'}
+                </span>
+              </div>
+
+              <p className="mt-1.5 text-sm font-semibold text-[var(--text-primary)]">
+                {inv.customerName} · <span className="font-normal text-[var(--text-secondary)]">{inv.customerPhone}</span>
+              </p>
+              <p className="mt-1 text-xs text-[var(--text-secondary)]">
+                DV: {formatVND(inv.serviceSubtotal)} · MP: {formatVND(inv.retailSubtotal)}
+              </p>
+
+              <div className="mt-3 flex items-center justify-between border-t border-[var(--border-subtle)] pt-3">
+                <div>
+                  <span className="block text-base font-bold text-[var(--text-primary)]">
+                    {formatVND(inv.finalAmount)}
+                  </span>
+                  <span className="text-xs font-semibold text-[#1F5C3E]">
+                    +{inv.pointsEarned} điểm
+                  </span>
+                  {inv.pointsRedeemed > 0 && (
+                    <span className="ml-1.5 text-xs text-[#7D4E0D]">(-{inv.pointsRedeemed}đ)</span>
+                  )}
+                </div>
+
+                {inv.status === 'PAID' &&
+                  (voidingId === inv.id ? (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        voidInvoice(inv.id, voidReason);
+                        setVoidingId(null);
+                      }}
+                      className="min-h-10 rounded-full bg-[#9E2A22] px-4 py-2 text-xs font-semibold text-white"
+                    >
+                      Xác nhận đảo
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => setVoidingId(inv.id)}
+                      className="inline-flex min-h-10 items-center gap-1.5 rounded-full border border-[var(--border-strong)] bg-[var(--bg-surface-card)] px-3.5 py-2 text-xs font-semibold text-[var(--text-secondary)]"
+                    >
+                      <RotateCcw className="h-3.5 w-3.5" />
+                      Hủy / Đảo điểm
+                    </button>
+                  ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop Table */}
+        <div className="mt-4 hidden overflow-x-auto md:block">
           <table className="w-full text-left text-sm tabular-nums">
             <thead>
               <tr className="border-b border-[var(--border-subtle)] text-xs text-[var(--text-muted)]">

@@ -386,15 +386,24 @@ export default function BookingPage({
       </div>
 
       <form onSubmit={handleSubmit} className="grid gap-8 lg:grid-cols-12 lg:items-start">
-        <div className="space-y-7 lg:col-span-8">
+        <div className="min-w-0 space-y-7 lg:col-span-8">
           {/* STEP 1: SELECT TREATMENTS */}
-          <section className="rounded-[28px] border border-[var(--border-subtle)] bg-[var(--bg-surface-card)] p-6 sm:p-8">
-            <h2 className="font-serif-display text-2xl font-medium text-[var(--text-primary)]">
-              1. Chọn liệu trình bạn muốn thực hiện
-            </h2>
-            <p className="mt-1 text-xs text-[var(--text-muted)]">
-              Bạn có thể kết hợp nhiều dịch vụ trong cùng một lần ghé Spa.
-            </p>
+          <section className="min-w-0 rounded-[26px] border border-[var(--border-subtle)] bg-[var(--bg-surface-card)] p-5 sm:rounded-[28px] sm:p-8">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <h2 className="font-serif-display text-2xl font-medium text-[var(--text-primary)]">
+                  1. Chọn liệu trình bạn muốn thực hiện
+                </h2>
+                <p className="mt-1 text-xs text-[var(--text-muted)]">
+                  Bạn có thể kết hợp nhiều dịch vụ trong cùng một lần ghé Spa.
+                </p>
+              </div>
+              {selectedServices.length > 0 && (
+                <span className="tabular-nums rounded-full bg-[var(--bg-pill-active)] px-3.5 py-1.5 text-xs font-semibold text-[var(--text-primary)] lg:hidden">
+                  Đã chọn {selectedServices.length} · {formatVND(estimatedTotal)}
+                </span>
+              )}
+            </div>
 
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
               {activeServices.map((srv) => {
@@ -445,7 +454,7 @@ export default function BookingPage({
           </section>
 
           {/* STEP 2: DATE, GUESTS & CAPACITY-AWARE TIME SLOTS */}
-          <section className="rounded-[28px] border border-[var(--border-subtle)] bg-[var(--bg-surface-card)] p-6 sm:p-8">
+          <section className="min-w-0 rounded-[26px] border border-[var(--border-subtle)] bg-[var(--bg-surface-card)] p-5 sm:rounded-[28px] sm:p-8">
             <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
               <div>
                 <h2 className="font-serif-display text-2xl font-medium text-[var(--text-primary)]">
@@ -476,8 +485,8 @@ export default function BookingPage({
               </div>
             </div>
 
-            {/* Quick Date Strip */}
-            <div className="mt-5 grid grid-cols-4 gap-2 sm:grid-cols-8">
+            {/* Quick Date Strip — Swipeable native-style ribbon on mobile */}
+            <div className="no-scrollbar -mx-1 mt-5 flex snap-x gap-2 overflow-x-auto px-1 pb-1 sm:mx-0 sm:grid sm:grid-cols-8 sm:px-0">
               {upcomingDays.map((d) => {
                 const closed = closedDates.some((c) => c.date === d.date);
                 const selected = selectedDate === d.date;
@@ -487,7 +496,7 @@ export default function BookingPage({
                     type="button"
                     onClick={() => setSelectedDate(d.date)}
                     className={cn(
-                      'flex flex-col items-center justify-center rounded-[16px] border py-2.5 text-center transition-colors tabular-nums',
+                      'flex min-h-16 min-w-[78px] shrink-0 snap-start flex-col items-center justify-center rounded-[16px] border px-2 py-2.5 text-center transition-colors active:scale-95 sm:min-w-0 tabular-nums',
                       selected
                         ? 'border-[var(--btn-primary-bg)] bg-[var(--btn-primary-bg)] text-[var(--btn-primary-text)]'
                         : closed
@@ -560,7 +569,7 @@ export default function BookingPage({
           </section>
 
           {/* STEP 3: CUSTOMER CONTACT & CONSENT */}
-          <section className="rounded-[28px] border border-[var(--border-subtle)] bg-[var(--bg-surface-card)] p-6 sm:p-8">
+          <section className="min-w-0 rounded-[26px] border border-[var(--border-subtle)] bg-[var(--bg-surface-card)] p-5 sm:rounded-[28px] sm:p-8">
             <h2 className="font-serif-display text-2xl font-medium text-[var(--text-primary)]">
               3. Thông tin người đặt hẹn
             </h2>

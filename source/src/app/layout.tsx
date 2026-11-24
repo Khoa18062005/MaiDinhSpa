@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Be_Vietnam_Pro, Spectral } from 'next/font/google';
 import './globals.css';
 import { SpaDemoProvider } from '@/lib/demo-store';
@@ -18,6 +18,12 @@ const beVietnamPro = Be_Vietnam_Pro({
   variable: '--font-sans',
   display: 'swap',
 });
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+};
 
 export const metadata: Metadata = {
   title: {

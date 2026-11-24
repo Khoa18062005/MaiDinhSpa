@@ -26,7 +26,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-4 z-50 mx-auto mt-4 w-full max-w-7xl px-3 sm:px-6 lg:px-8">
+    <header className="sticky top-[max(0.75rem,env(safe-area-inset-top))] z-50 mx-auto mt-3 w-full max-w-7xl px-3 sm:mt-4 sm:px-6 lg:px-8">
       <nav
         aria-label="Điều hướng chính Mai Đinh Spa"
         className="flex items-center justify-between gap-2 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-surface-card)]/96 px-3.5 py-2 shadow-[var(--shadow-ambient)] backdrop-blur-xs lg:px-5"
@@ -98,11 +98,11 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Quick CTA + Menu Trigger */}
+        {/* Mobile Quick CTA + Menu Trigger (44x44px Apple HIG targets) */}
         <div className="flex shrink-0 items-center gap-2 lg:hidden">
           <Link
             href="/dat-lich"
-            className="inline-flex min-h-10 shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full bg-[var(--btn-primary-bg)] px-3.5 py-2 text-xs font-semibold text-[var(--btn-primary-text)]"
+            className="inline-flex min-h-11 shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full bg-[var(--btn-primary-bg)] px-4 py-2 text-xs font-semibold text-[var(--btn-primary-text)] active:scale-95"
           >
             <CalendarCheck className="h-3.5 w-3.5 shrink-0" strokeWidth={1.75} />
             Đặt lịch
@@ -112,7 +112,7 @@ export default function Navbar() {
             onClick={() => setMobileOpen((v) => !v)}
             aria-expanded={mobileOpen}
             aria-label={mobileOpen ? 'Đóng menu điều hướng' : 'Mở menu điều hướng'}
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[var(--border-subtle)] bg-[var(--bg-surface-soft)] text-[var(--text-primary)]"
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[var(--border-subtle)] bg-[var(--bg-surface-soft)] text-[var(--text-primary)] active:scale-95"
           >
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>

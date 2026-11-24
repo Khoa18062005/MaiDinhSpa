@@ -118,11 +118,11 @@ export default function ServicePillarsShowcase() {
 
   return (
     <div className="mt-8">
-      {/* Pillar Selector Pills */}
+      {/* Pillar Selector Pills — Swipeable horizontal strip on mobile */}
       <div
         role="tablist"
         aria-label="Ba nhóm chuyên môn dịch vụ tại Mai Đinh Spa"
-        className="flex flex-wrap gap-2.5"
+        className="no-scrollbar -mx-1 flex snap-x gap-2 overflow-x-auto px-1 pb-1 sm:mx-0 sm:flex-wrap sm:gap-2.5 sm:px-0"
       >
         {SERVICE_PILLARS.map((pillar) => {
           const selected = pillar.id === activeId;
@@ -134,7 +134,7 @@ export default function ServicePillarsShowcase() {
               aria-selected={selected}
               onClick={() => setActiveId(pillar.id)}
               className={cn(
-                'min-h-11 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors',
+                'min-h-11 shrink-0 snap-start whitespace-nowrap rounded-full px-5 py-2.5 text-sm font-semibold transition-colors active:scale-95',
                 selected
                   ? 'bg-[var(--btn-primary-bg)] text-[var(--btn-primary-text)] shadow-xs'
                   : 'border border-[var(--border-strong)] bg-[var(--bg-surface-card)] text-[var(--text-secondary)] hover:bg-[var(--bg-pill-active)] hover:text-[var(--text-primary)]'
@@ -205,25 +205,27 @@ export default function ServicePillarsShowcase() {
               {current.signatureTreatments.map((item) => (
                 <div
                   key={item.slug}
-                  className="flex flex-wrap items-center justify-between gap-3 py-3 text-sm"
+                  className="flex flex-col gap-2.5 py-3.5 text-sm sm:flex-row sm:items-center sm:justify-between"
                 >
                   <Link
                     href={`/dich-vu/${item.slug}`}
-                    className="font-medium text-[var(--text-primary)] hover:underline"
+                    className="font-medium leading-snug text-[var(--text-primary)] hover:underline"
                   >
                     {item.name}
                   </Link>
-                  <div className="flex items-center gap-4 tabular-nums">
-                    <span className="text-xs text-[var(--text-muted)]">{item.duration}</span>
-                    <span className="font-semibold text-[var(--text-primary)]">
-                      {formatVND(item.price)}
-                    </span>
+                  <div className="flex items-center justify-between gap-3 sm:justify-end sm:gap-4 tabular-nums">
+                    <div className="flex items-center gap-2.5">
+                      <span className="text-xs text-[var(--text-muted)]">{item.duration}</span>
+                      <span className="font-semibold text-[var(--text-primary)]">
+                        {formatVND(item.price)}
+                      </span>
+                    </div>
                     <Link
                       href={`/dat-lich?service=${item.slug}`}
-                      className="inline-flex items-center gap-1 rounded-full bg-[var(--btn-primary-bg)] px-3 py-1 text-xs font-semibold text-[var(--btn-primary-text)] hover:bg-[var(--btn-primary-hover)]"
+                      className="inline-flex min-h-9 shrink-0 items-center gap-1 whitespace-nowrap rounded-full bg-[var(--btn-primary-bg)] px-3.5 py-1.5 text-xs font-semibold text-[var(--btn-primary-text)] hover:bg-[var(--btn-primary-hover)] active:scale-95"
                     >
                       Đặt hẹn
-                      <ArrowRight className="h-3 w-3" />
+                      <ArrowRight className="h-3 w-3 shrink-0" />
                     </Link>
                   </div>
                 </div>

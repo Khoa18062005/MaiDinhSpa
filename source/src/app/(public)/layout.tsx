@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FloatingContact from '@/components/layout/FloatingContact';
+import MobileBottomNav from '@/components/layout/MobileBottomNav';
 import { getSpaSettings } from '@/lib/data';
 
 export default async function PublicLayout({
@@ -14,8 +15,9 @@ export default async function PublicLayout({
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar />
-      <main className="flex-1 pt-9">{children}</main>
+      <main className="flex-1 pt-6 sm:pt-9">{children}</main>
       <FloatingContact settings={settings} />
+      <MobileBottomNav settings={settings} />
       <Footer settings={settings} />
     </div>
   );

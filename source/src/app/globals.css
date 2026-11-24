@@ -277,7 +277,18 @@
     color: var(--text-primary);
     font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
     line-height: 1.65;
+    overflow-x: clip;
+    -webkit-tap-highlight-color: transparent;
     transition: background-color 0.22s ease, color 0.22s ease;
+  }
+
+  /* Ngăn iOS Safari tự động phóng to khung nhìn khi chạm vào ô nhập liệu < 16px */
+  @media (max-width: 767px) {
+    input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+    select,
+    textarea {
+      font-size: 16px !important;
+    }
   }
 
   ::selection {
@@ -317,6 +328,19 @@
 
 .tabular-nums {
   font-variant-numeric: tabular-nums;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.pb-safe-bottom {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
 }
 
 @media (prefers-reduced-motion: reduce) {

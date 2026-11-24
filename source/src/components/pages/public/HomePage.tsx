@@ -39,7 +39,7 @@ export default function HomePage({
       {/* 1. FIRST VIEWPORT — Asymmetric Bento Split Hero + Porcelain Proof Bar */}
       <section aria-label="Giới thiệu Mai Đinh Spa" className="grid gap-7 lg:grid-cols-12 lg:items-stretch">
         {/* Left Editorial Statement Card (5 columns) */}
-        <div className="relative flex flex-col justify-between overflow-hidden rounded-[28px] border border-[var(--border-subtle)] bg-[var(--bg-surface-soft)] p-7 sm:p-10 lg:col-span-5 lg:p-11">
+        <div className="relative flex flex-col justify-between overflow-hidden rounded-[26px] border border-[var(--border-subtle)] bg-[var(--bg-surface-soft)] p-6 sm:rounded-[28px] sm:p-10 lg:col-span-5 lg:p-11">
           <svg
             aria-hidden="true"
             viewBox="0 0 220 220"
@@ -50,34 +50,34 @@ export default function HomePage({
           </svg>
 
           <div className="relative">
-            <h1 className="font-serif-display text-4xl font-medium tracking-tight text-[var(--text-primary)] sm:text-5xl lg:leading-[1.12]">
+            <h1 className="font-serif-display text-[2.05rem] leading-[1.15] font-medium tracking-tight text-balance text-[var(--text-primary)] sm:text-5xl lg:leading-[1.12]">
               Đánh thức vẻ đẹp tự nhiên &amp; sự thư thái nguyên bản
             </h1>
 
-            <p className="mt-5 text-[15px] leading-[1.75] text-[var(--text-secondary)]">
+            <p className="mt-4 text-[15px] leading-[1.72] text-[var(--text-secondary)] sm:mt-5">
               Tại {settings.spaName}, chúng tôi luôn chú trọng mang đến cho bạn cảm giác thoải mái, được chăm sóc tận tâm và an tâm trong suốt trải nghiệm — thông qua các dòng dược mỹ phẩm dịu nhẹ, minh bạch nguồn gốc cùng đội ngũ kỹ thuật viên được đào tạo bài bản.
             </p>
           </div>
 
-          <div className="relative mt-8 pt-2">
-            <div className="flex flex-wrap items-center gap-3.5">
+          <div className="relative mt-7 pt-1 sm:mt-8 sm:pt-2">
+            <div className="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:items-center sm:gap-3.5">
               <Link
                 href="/dat-lich"
-                className="inline-flex min-h-12 items-center gap-2.5 rounded-full bg-[var(--btn-primary-bg)] px-7 py-3 text-sm font-semibold text-[var(--btn-primary-text)] shadow-[var(--shadow-ambient)] transition-all hover:-translate-y-0.5 hover:bg-[var(--btn-primary-hover)]"
+                className="inline-flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[var(--btn-primary-bg)] px-5 py-3 text-sm font-semibold text-[var(--btn-primary-text)] shadow-[var(--shadow-ambient)] transition-all active:scale-95 sm:px-7 lg:hover:-translate-y-0.5 lg:hover:bg-[var(--btn-primary-hover)]"
               >
                 Đặt Lịch Ngay
-                <ArrowRight className="h-4 w-4" strokeWidth={1.85} />
+                <ArrowRight className="h-4 w-4 shrink-0" strokeWidth={1.85} />
               </Link>
 
               <Link
                 href="/dich-vu"
-                className="inline-flex min-h-12 items-center rounded-full border border-[var(--border-strong)] bg-transparent px-6 py-3 text-sm font-semibold text-[var(--text-primary)] transition-colors hover:bg-[var(--bg-pill-active)]"
+                className="inline-flex min-h-12 items-center justify-center whitespace-nowrap rounded-full border border-[var(--border-strong)] bg-transparent px-5 py-3 text-sm font-semibold text-[var(--text-primary)] transition-colors hover:bg-[var(--bg-pill-active)] active:scale-95 sm:px-6"
               >
                 Gói Dịch Vụ
               </Link>
             </div>
 
-            <p className="mt-4 text-xs text-[var(--text-muted)]">
+            <p className="mt-4 text-xs leading-relaxed text-[var(--text-muted)]">
               Giữ chỗ trước miễn phí 100% · Thanh toán trực tiếp tại quầy sau khi trải nghiệm
             </p>
           </div>
@@ -85,7 +85,7 @@ export default function HomePage({
 
         {/* Right Sanctuary Visual + Porcelain Rating Strip (7 columns) */}
         <div className="flex flex-col gap-4 lg:col-span-7">
-          <div className="relative min-h-[300px] flex-1 overflow-hidden rounded-[28px] border border-[var(--border-subtle)] bg-[#EDE4D5] sm:min-h-[390px]">
+          <div className="relative min-h-[256px] flex-1 overflow-hidden rounded-[26px] border border-[var(--border-subtle)] bg-[#EDE4D5] sm:min-h-[390px] sm:rounded-[28px]">
             <Image
               src="/images/hero-sanctuary.svg"
               alt="Không gian phòng trị liệu và thảo mộc tươi tại Mai Đinh Spa"
@@ -500,17 +500,17 @@ export default function HomePage({
               </li>
             </ul>
 
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link
                 href="/dang-ky"
-                className="inline-flex min-h-11 items-center gap-2 rounded-full bg-[#DFC084] px-6 py-2.5 text-sm font-semibold text-[#231D19] transition-colors hover:bg-[#EAD09B]"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#DFC084] px-6 py-2.5 text-sm font-semibold text-[#231D19] transition-colors hover:bg-[#EAD09B] active:scale-95"
               >
-                <Award className="h-4 w-4" strokeWidth={1.85} />
+                <Award className="h-4 w-4 shrink-0" strokeWidth={1.85} />
                 Mở thẻ thành viên miễn phí
               </Link>
               <Link
                 href="/tai-khoan"
-                className="inline-flex min-h-11 items-center gap-2 rounded-full border border-[#5A4E44] px-5 py-2.5 text-sm font-semibold text-[#FAF7F2] transition-colors hover:bg-white/10"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#5A4E44] px-5 py-2.5 text-sm font-semibold text-[#FAF7F2] transition-colors hover:bg-white/10 active:scale-95"
               >
                 Xem thử Thẻ Thành viên
               </Link>

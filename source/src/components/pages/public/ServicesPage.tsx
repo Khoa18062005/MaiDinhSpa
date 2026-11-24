@@ -44,16 +44,20 @@ export default function ServicesPage({ categories, initialServices }: ServicesPa
           Giá niêm yết trọn gói cho từng buổi lẻ tại Mai Đinh Spa. Thành viên Hạng Bạc, Vàng và Kim Cương được tự động áp dụng mức giảm ưu đãi từ 5% – 12% khi thanh toán tại quầy.
         </p>
 
-        {/* Filter Bar */}
-        <div className="mt-7 flex flex-col justify-between gap-4 lg:flex-row lg:items-center">
-          <div className="flex flex-wrap items-center gap-2" role="tablist" aria-label="Nhóm dịch vụ">
+        {/* Filter Bar — Swipeable category ribbon on mobile */}
+        <div className="mt-6 flex flex-col justify-between gap-4 sm:mt-7 lg:flex-row lg:items-center">
+          <div
+            className="no-scrollbar -mx-1 flex snap-x items-center gap-2 overflow-x-auto px-1 pb-1 sm:mx-0 sm:flex-wrap sm:px-0"
+            role="tablist"
+            aria-label="Nhóm dịch vụ"
+          >
             <button
               type="button"
               role="tab"
               aria-selected={selectedCategory === 'ALL'}
               onClick={() => setSelectedCategory('ALL')}
               className={cn(
-                'min-h-10 rounded-full px-4 py-2 text-xs font-semibold transition-colors',
+                'min-h-11 shrink-0 snap-start whitespace-nowrap rounded-full px-4.5 py-2 text-xs font-semibold transition-colors active:scale-95',
                 selectedCategory === 'ALL'
                   ? 'bg-[var(--btn-primary-bg)] text-[var(--btn-primary-text)]'
                   : 'border border-[var(--border-strong)] bg-[var(--bg-surface-card)] text-[var(--text-secondary)] hover:bg-[var(--bg-pill-active)]'
@@ -69,7 +73,7 @@ export default function ServicesPage({ categories, initialServices }: ServicesPa
                 aria-selected={selectedCategory === cat.id}
                 onClick={() => setSelectedCategory(cat.id)}
                 className={cn(
-                  'min-h-10 rounded-full px-4 py-2 text-xs font-semibold transition-colors',
+                  'min-h-11 shrink-0 snap-start whitespace-nowrap rounded-full px-4.5 py-2 text-xs font-semibold transition-colors active:scale-95',
                   selectedCategory === cat.id
                     ? 'bg-[var(--btn-primary-bg)] text-[var(--btn-primary-text)]'
                     : 'border border-[var(--border-strong)] bg-[var(--bg-surface-card)] text-[var(--text-secondary)] hover:bg-[var(--bg-pill-active)]'
