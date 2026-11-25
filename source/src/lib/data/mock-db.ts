@@ -15,15 +15,16 @@ import {
 export const MOCK_SPA_SETTINGS: SpaSettings = {
   spaName: 'Mai Đinh Spa',
   tagline: 'Chăm sóc da chuyên sâu · Trị liệu dưỡng sinh · Tái tạo năng lượng',
-  address: '128 Nguyễn Thị Minh Khai, Phường Võ Thị Sáu, Quận 3',
-  districtCity: 'TP. Hồ Chí Minh',
+  address: 'A21 Tổ 8B Khu Phố 5, Phường An Bình',
+  districtCity: 'Biên Hòa, Việt Nam',
   phone: '0379265076',
   phoneDisplay: '0379 265 076',
   email: 'lienhe@maidinhspa.vn',
   zaloUrl: 'https://zalo.me/0379265076',
   facebookUrl: 'https://facebook.com',
   instagramUrl: 'https://instagram.com',
-  mapsUrl: 'https://maps.google.com',
+  mapsUrl:
+    'https://www.google.com/maps/search/?api=1&query=A21+T%E1%BB%95+8B+Khu+Ph%E1%BB%91+5+Ph%C6%B0%E1%BB%9Dng+An+B%C3%ACnh,+Bi%C3%AAn+H%C3%B2a,+Vietnam',
   openTime: '08:30',
   closeTime: '20:00',
   slotIntervalMinutes: 30,
@@ -692,7 +693,7 @@ export const MOCK_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'tes-03',
-    customerLabel: 'Bạn Hoàng Yến · Quận 3',
+    customerLabel: 'Bạn Hoàng Yến · An Bình, Biên Hòa',
     serviceUsed: 'Thanh lọc Da Mụn Chuẩn Y khoa',
     rating: 5,
     quote:

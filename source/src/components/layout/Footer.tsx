@@ -32,9 +32,14 @@ export default function Footer({ settings }: FooterProps) {
             <ul className="mt-4 space-y-3 text-sm text-[var(--text-secondary)]">
               <li className="flex items-start gap-2.5">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent-gold-text)]" strokeWidth={1.75} />
-                <span>
+                <a
+                  href={settings.mapsUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-[var(--text-primary)] hover:underline"
+                >
                   {settings.address}, {settings.districtCity}
-                </span>
+                </a>
               </li>
               <li className="flex items-center gap-2.5 tabular-nums">
                 <Clock className="h-4 w-4 shrink-0 text-[var(--accent-gold-text)]" strokeWidth={1.75} />

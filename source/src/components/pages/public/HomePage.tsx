@@ -96,7 +96,7 @@ export default function HomePage({
             />
             <div className="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-[var(--bg-surface-card)]/92 px-3.5 py-1.5 text-xs font-medium text-[var(--text-primary)] shadow-xs">
               <Sparkles className="h-3.5 w-3.5 text-[var(--accent-gold-text)]" strokeWidth={1.75} />
-              01 Cơ sở duy nhất · Quận 3, TP.HCM
+              01 Cơ sở duy nhất · An Bình, Biên Hòa
             </div>
           </div>
 
