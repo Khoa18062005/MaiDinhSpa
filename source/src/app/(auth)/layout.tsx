@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+import BrandLogo from '@/components/shared/BrandLogo';
 
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -11,11 +12,11 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
           className="inline-flex items-center gap-2 text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
         >
           <ArrowLeft className="h-4 w-4" strokeWidth={1.75} />
-          Về trang chủ Mai Đinh Spa
+          Về trang chủ
         </Link>
 
-        <Link href="/" className="font-serif-display text-xl font-semibold text-[var(--text-primary)]">
-          Mai Đinh Spa
+        <Link href="/" aria-label="Mai Đinh Skinlab Spa">
+          <BrandLogo size="sm" />
         </Link>
       </div>
 

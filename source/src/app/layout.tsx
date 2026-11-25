@@ -40,8 +40,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi" className={`${spectral.variable} ${beVietnamPro.variable}`}>
-      <body className="min-h-screen antialiased">
+    <html
+      lang="vi"
+      suppressHydrationWarning
+      className={`${spectral.variable} ${beVietnamPro.variable}`}
+    >
+      <body suppressHydrationWarning className="min-h-screen antialiased">
         <SpaDemoProvider>
           {children}
           <ThemePaletteSwitcher />

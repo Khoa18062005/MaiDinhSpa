@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Clock, MapPin, Phone } from 'lucide-react';
 import { SpaSettings } from '@/types';
+import BrandLogo from '@/components/shared/BrandLogo';
 
 interface FooterProps {
   settings: SpaSettings;
@@ -14,17 +15,10 @@ export default function Footer({ settings }: FooterProps) {
         <div className="grid gap-10 md:grid-cols-12">
           {/* Brand Column */}
           <div className="md:col-span-5">
-            <div className="flex items-center gap-3">
-              <span className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border-strong)] bg-[var(--bg-surface-card)] font-serif-display text-lg font-semibold text-[var(--accent-gold-text)]">
-                MĐ
-              </span>
-              <div>
-                <p className="font-serif-display text-2xl font-medium text-[var(--text-primary)]">
-                  {settings.spaName}
-                </p>
-                <p className="text-xs text-[var(--text-muted)]">{settings.tagline}</p>
-              </div>
-            </div>
+            <Link href="/" aria-label={settings.spaName} className="inline-block">
+              <BrandLogo size="lg" />
+            </Link>
+            <p className="mt-2 text-xs text-[var(--text-muted)]">{settings.tagline}</p>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-[var(--text-secondary)]">
               Không gian chăm sóc da chuyên sâu và trị liệu dưỡng sinh 01 cơ sở duy nhất. Mỗi buổi hẹn đều được giữ chỗ riêng tư để bạn tận hưởng trọn vẹn sự thư thái mà không phải chờ đợi.
             </p>

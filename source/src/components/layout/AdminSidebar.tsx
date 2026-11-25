@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { useSpaDemo } from '@/lib/demo-store';
 import { cn } from '@/lib/utils';
+import BrandLogo from '@/components/shared/BrandLogo';
 
 const ADMIN_LINKS = [
   { href: '/admin', label: 'Tổng quan hôm nay', icon: LayoutDashboard },
@@ -41,19 +42,12 @@ export default function AdminSidebar() {
   return (
     <>
       {/* Mobile Top Header */}
-      <div className="sticky top-0 z-40 flex items-center justify-between border-b border-[var(--border-subtle)] bg-[var(--bg-sidebar)] px-4 py-3 lg:hidden">
-        <div className="flex items-center gap-2.5">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#2B2521] text-xs font-bold text-[#DFC084]">
-            MĐ
+      <div className="sticky top-0 z-40 flex items-center justify-between border-b border-[var(--border-subtle)] bg-[var(--bg-sidebar)] px-4 py-2.5 lg:hidden">
+        <div className="flex items-center gap-3">
+          <BrandLogo size="sm" />
+          <span className="rounded-full bg-[var(--bg-pill-active)] px-2.5 py-0.5 text-[11px] font-semibold text-[var(--text-primary)] tabular-nums">
+            {pendingCount} chờ duyệt
           </span>
-          <div>
-            <p className="text-sm font-semibold text-[var(--text-primary)]">
-              Quản trị Mai Đinh Spa
-            </p>
-            <p className="text-[11px] text-[var(--text-muted)] tabular-nums">
-              {pendingCount} lịch đang chờ duyệt
-            </p>
-          </div>
         </div>
 
         <button
@@ -74,16 +68,11 @@ export default function AdminSidebar() {
         )}
       >
         <div>
-          <div className="hidden items-center gap-3 pb-6 lg:flex">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2B2521] font-serif-display text-base font-semibold text-[#DFC084]">
-              MĐ
-            </span>
-            <div>
-              <p className="text-sm font-bold text-[var(--text-primary)]">
-                Mai Đinh Spa Admin
-              </p>
-              <p className="text-xs text-[var(--text-muted)]">Cơ sở Quận 3 · Chủ Spa</p>
-            </div>
+          <div className="hidden border-b border-[var(--border-subtle)] pb-5 mb-4 lg:block">
+            <BrandLogo size="md" />
+            <p className="mt-1.5 text-xs font-medium text-[var(--text-muted)]">
+              Cổng Quản trị · Chủ Spa
+            </p>
           </div>
 
           <nav aria-label="Điều hướng Quản trị" className="space-y-1">
