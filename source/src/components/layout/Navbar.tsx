@@ -37,9 +37,9 @@ export default function Navbar() {
           <Link
             href="/"
             aria-label="Trang chủ Mai Đinh Skinlab Spa"
-            className="rounded-2xl py-0.5 transition-opacity hover:opacity-85 focus-visible:outline-offset-4"
+            className="inline-flex items-center rounded-2xl py-0.5 transition-opacity hover:opacity-85 focus-visible:outline-offset-4"
           >
-            <BrandLogo size="md" />
+            <BrandLogo size="md" className="translate-y-[3px]" />
           </Link>
         </div>
 
